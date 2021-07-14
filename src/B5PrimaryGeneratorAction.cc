@@ -45,6 +45,10 @@ int gPrimaryParticlePDG;
 double gPrimaryParticleEnergy;
 double gPrimaryParticleMass;
 extern bool gUseGPS;
+extern bool gGenerateStepTheta;
+extern G4double gNsteps;
+extern G4double gTheta_step;
+
 extern G4double gThetaLimitMin;  
 extern G4double gThetaLimitMax;
 extern G4double gBeamMomentum;
@@ -67,7 +71,6 @@ B5PrimaryGeneratorAction::B5PrimaryGeneratorAction()
     fParticleGun  = new G4ParticleGun(fParticle);
     fParticleGun->SetParticleMomentum(fMomentum);
   }
-  
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -96,9 +99,16 @@ void B5PrimaryGeneratorAction::GeneratePrimaries(G4Event* event)
     fParticleGun->SetParticleTime(0.0*ns);
     // random generation
     double dx,dy,dz;
-    double theta_limit_max = cos(gThetaLimitMax/180.0*3.14159265358979); 
-    double theta_limit_min = cos(gThetaLimitMin/180.0*3.14159265358979); 
-    dz = gRandom -> Uniform(theta_limit_max,theta_limit_min); // uniform cos(theta)
+    if (gGenerateStepTheta == true){
+      G4double GenTheta = ( (int) (gNsteps * gRandom -> Uniform()) );
+      GenTheta = GenTheta*gTheta_step * 3.14159265358979/180.0;
+      dz = cos(GenTheta);
+    }
+    else{
+      double theta_limit_max = cos(gThetaLimitMax/180.0*3.14159265358979); 
+      double theta_limit_min = cos(gThetaLimitMin/180.0*3.14159265358979); 
+      dz = gRandom -> Uniform(theta_limit_max,theta_limit_min); // uniform cos(theta)
+    }
     double phi = gRandom -> Uniform(0,4*3.14159265358979); // uniform phi 
     double sin_theta= sqrt(1.0-dz*dz);
     dx = sin_theta * cos(phi);

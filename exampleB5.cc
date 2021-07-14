@@ -62,6 +62,8 @@
 bool gSaveStepLevel = false;    // 
 long gSeed = 0;                 // Random seed number. 0 for time seed 
 bool gUseGPS = true;            //
+bool gGenerateStepTheta;  //
+
 
 // if gUseGPS = false, user defined beam conditions
 G4double gThetaLimitMin;  
@@ -69,6 +71,8 @@ G4double gThetaLimitMax;
 G4double gBeamMomentum;
 G4String gParticle;
 
+G4double gNsteps;
+G4double gTheta_step;
 
 int main(int argc,char** argv)
 {
@@ -83,18 +87,29 @@ int main(int argc,char** argv)
   
   
   gSaveStepLevel = false;  // whether save all the step information or not
-  gUseGPS = true;  // [true] : use General Particle Source described in your.mac file (/gps/position ...)   [false] : Random angle generation
+  gUseGPS = false;  // [true] : use General Particle Source described in your.mac file (/gps/position ...)   [false] : Random angle generation
+  gGenerateStepTheta = false;
   if (gUseGPS == false){ // Random Beam Generation Setting
-    //                     // Uniform azimuthal angle [0 ~ 2pi]    
-    gThetaLimitMin = 0;    // polar angle min [deg]
-    gThetaLimitMax = 50;   // polar angle max [deg]
+    
+    if (gGenerateStepTheta == true){
+      // special generation: 5 deg step (0 ~ 30 deg) in polar angle theta
+      gNsteps = 7; // number of steps: Generated angle [0 ~ (Nstep-1)*step]
+      gTheta_step = 5; // step size of theta [deg]
+    }
+    
+    if (gGenerateStepTheta == false){
+      //                     // Uniform azimuthal angle [0 ~ 2pi]    
+      gThetaLimitMin = 0;    // polar angle min [deg]
+      gThetaLimitMax = 50;   // polar angle max [deg]
+    }
+    
     gBeamMomentum = 1000 * CLHEP::MeV; // Primary particle momentum
     gParticle = "gamma";
   }
 
+  
   //                                      User Defined Parameters                                                //
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  
   
   if (argc == 4){
     //Random engine
@@ -117,7 +132,7 @@ int main(int argc,char** argv)
   else if (str_fname == ""){
     str_fname = "VisMac.root";
   }
-  
+
   auto tr = new TTree("tree","Geant4 output");
   
   auto physicsList = new FTFP_BERT;
@@ -150,7 +165,7 @@ int main(int argc,char** argv)
     
     delete ui;
   }
-  
+
   tf -> cd();
   tr -> Write();
   tf -> Close();
