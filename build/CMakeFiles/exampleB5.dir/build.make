@@ -102,9 +102,35 @@ CMakeFiles/exampleB5.dir/src/B5ActionInitialization.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB5.dir/src/B5ActionInitialization.cc.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/a1004/Desktop/Koto/Fiber_W/src/B5ActionInitialization.cc -o CMakeFiles/exampleB5.dir/src/B5ActionInitialization.cc.s
 
+CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.o: CMakeFiles/exampleB5.dir/flags.make
+CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.o: ../src/B5CsIHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5CsIHit.cc
+
+CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/a1004/Desktop/Koto/Fiber_W/src/B5CsIHit.cc > CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.i
+
+CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/a1004/Desktop/Koto/Fiber_W/src/B5CsIHit.cc -o CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.s
+
+CMakeFiles/exampleB5.dir/src/B5CsISD.cc.o: CMakeFiles/exampleB5.dir/flags.make
+CMakeFiles/exampleB5.dir/src/B5CsISD.cc.o: ../src/B5CsISD.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/exampleB5.dir/src/B5CsISD.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5CsISD.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5CsISD.cc
+
+CMakeFiles/exampleB5.dir/src/B5CsISD.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB5.dir/src/B5CsISD.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/a1004/Desktop/Koto/Fiber_W/src/B5CsISD.cc > CMakeFiles/exampleB5.dir/src/B5CsISD.cc.i
+
+CMakeFiles/exampleB5.dir/src/B5CsISD.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB5.dir/src/B5CsISD.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/a1004/Desktop/Koto/Fiber_W/src/B5CsISD.cc -o CMakeFiles/exampleB5.dir/src/B5CsISD.cc.s
+
 CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.o: CMakeFiles/exampleB5.dir/flags.make
 CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.o: ../src/B5DetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5DetectorConstruction.cc
 
 CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.i: cmake_force
@@ -117,7 +143,7 @@ CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.s: cmake_force
 
 CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.o: CMakeFiles/exampleB5.dir/flags.make
 CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.o: ../src/B5EmCalorimeterHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5EmCalorimeterHit.cc
 
 CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.i: cmake_force
@@ -130,7 +156,7 @@ CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.s: cmake_force
 
 CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.o: CMakeFiles/exampleB5.dir/flags.make
 CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.o: ../src/B5EmCalorimeterSD.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5EmCalorimeterSD.cc
 
 CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.i: cmake_force
@@ -143,7 +169,7 @@ CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.s: cmake_force
 
 CMakeFiles/exampleB5.dir/src/B5EventAction.cc.o: CMakeFiles/exampleB5.dir/flags.make
 CMakeFiles/exampleB5.dir/src/B5EventAction.cc.o: ../src/B5EventAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/exampleB5.dir/src/B5EventAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/exampleB5.dir/src/B5EventAction.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5EventAction.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5EventAction.cc
 
 CMakeFiles/exampleB5.dir/src/B5EventAction.cc.i: cmake_force
@@ -156,7 +182,7 @@ CMakeFiles/exampleB5.dir/src/B5EventAction.cc.s: cmake_force
 
 CMakeFiles/exampleB5.dir/src/B5LeadHit.cc.o: CMakeFiles/exampleB5.dir/flags.make
 CMakeFiles/exampleB5.dir/src/B5LeadHit.cc.o: ../src/B5LeadHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/exampleB5.dir/src/B5LeadHit.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/exampleB5.dir/src/B5LeadHit.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5LeadHit.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5LeadHit.cc
 
 CMakeFiles/exampleB5.dir/src/B5LeadHit.cc.i: cmake_force
@@ -169,7 +195,7 @@ CMakeFiles/exampleB5.dir/src/B5LeadHit.cc.s: cmake_force
 
 CMakeFiles/exampleB5.dir/src/B5LeadSD.cc.o: CMakeFiles/exampleB5.dir/flags.make
 CMakeFiles/exampleB5.dir/src/B5LeadSD.cc.o: ../src/B5LeadSD.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/exampleB5.dir/src/B5LeadSD.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/exampleB5.dir/src/B5LeadSD.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5LeadSD.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5LeadSD.cc
 
 CMakeFiles/exampleB5.dir/src/B5LeadSD.cc.i: cmake_force
@@ -182,7 +208,7 @@ CMakeFiles/exampleB5.dir/src/B5LeadSD.cc.s: cmake_force
 
 CMakeFiles/exampleB5.dir/src/B5PrimaryGeneratorAction.cc.o: CMakeFiles/exampleB5.dir/flags.make
 CMakeFiles/exampleB5.dir/src/B5PrimaryGeneratorAction.cc.o: ../src/B5PrimaryGeneratorAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/exampleB5.dir/src/B5PrimaryGeneratorAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/exampleB5.dir/src/B5PrimaryGeneratorAction.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5PrimaryGeneratorAction.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5PrimaryGeneratorAction.cc
 
 CMakeFiles/exampleB5.dir/src/B5PrimaryGeneratorAction.cc.i: cmake_force
@@ -195,7 +221,7 @@ CMakeFiles/exampleB5.dir/src/B5PrimaryGeneratorAction.cc.s: cmake_force
 
 CMakeFiles/exampleB5.dir/src/B5RunAction.cc.o: CMakeFiles/exampleB5.dir/flags.make
 CMakeFiles/exampleB5.dir/src/B5RunAction.cc.o: ../src/B5RunAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/exampleB5.dir/src/B5RunAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/exampleB5.dir/src/B5RunAction.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5RunAction.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5RunAction.cc
 
 CMakeFiles/exampleB5.dir/src/B5RunAction.cc.i: cmake_force
@@ -208,7 +234,7 @@ CMakeFiles/exampleB5.dir/src/B5RunAction.cc.s: cmake_force
 
 CMakeFiles/exampleB5.dir/src/B5StackingAction.cc.o: CMakeFiles/exampleB5.dir/flags.make
 CMakeFiles/exampleB5.dir/src/B5StackingAction.cc.o: ../src/B5StackingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/exampleB5.dir/src/B5StackingAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/exampleB5.dir/src/B5StackingAction.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB5.dir/src/B5StackingAction.cc.o -c /Users/a1004/Desktop/Koto/Fiber_W/src/B5StackingAction.cc
 
 CMakeFiles/exampleB5.dir/src/B5StackingAction.cc.i: cmake_force
@@ -223,6 +249,8 @@ CMakeFiles/exampleB5.dir/src/B5StackingAction.cc.s: cmake_force
 exampleB5_OBJECTS = \
 "CMakeFiles/exampleB5.dir/exampleB5.cc.o" \
 "CMakeFiles/exampleB5.dir/src/B5ActionInitialization.cc.o" \
+"CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.o" \
+"CMakeFiles/exampleB5.dir/src/B5CsISD.cc.o" \
 "CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.o" \
 "CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.o" \
 "CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.o" \
@@ -238,6 +266,8 @@ exampleB5_EXTERNAL_OBJECTS =
 
 exampleB5: CMakeFiles/exampleB5.dir/exampleB5.cc.o
 exampleB5: CMakeFiles/exampleB5.dir/src/B5ActionInitialization.cc.o
+exampleB5: CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.o
+exampleB5: CMakeFiles/exampleB5.dir/src/B5CsISD.cc.o
 exampleB5: CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.o
 exampleB5: CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.o
 exampleB5: CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.o
@@ -306,7 +336,7 @@ exampleB5: /Users/a1004/tools/Geant4/10.06.p03/lib/libG4intercoms.dylib
 exampleB5: /Users/a1004/tools/Geant4/10.06.p03/lib/libG4global.dylib
 exampleB5: /usr/local/lib/libCLHEP-2.4.1.3.dylib
 exampleB5: CMakeFiles/exampleB5.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable exampleB5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/a1004/Desktop/Koto/Fiber_W/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable exampleB5"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exampleB5.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

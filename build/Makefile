@@ -255,6 +255,60 @@ src/B5ActionInitialization.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exampleB5.dir/build.make CMakeFiles/exampleB5.dir/src/B5ActionInitialization.cc.s
 .PHONY : src/B5ActionInitialization.cc.s
 
+src/B5CsIHit.o: src/B5CsIHit.cc.o
+
+.PHONY : src/B5CsIHit.o
+
+# target to build an object file
+src/B5CsIHit.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exampleB5.dir/build.make CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.o
+.PHONY : src/B5CsIHit.cc.o
+
+src/B5CsIHit.i: src/B5CsIHit.cc.i
+
+.PHONY : src/B5CsIHit.i
+
+# target to preprocess a source file
+src/B5CsIHit.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exampleB5.dir/build.make CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.i
+.PHONY : src/B5CsIHit.cc.i
+
+src/B5CsIHit.s: src/B5CsIHit.cc.s
+
+.PHONY : src/B5CsIHit.s
+
+# target to generate assembly for a file
+src/B5CsIHit.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exampleB5.dir/build.make CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.s
+.PHONY : src/B5CsIHit.cc.s
+
+src/B5CsISD.o: src/B5CsISD.cc.o
+
+.PHONY : src/B5CsISD.o
+
+# target to build an object file
+src/B5CsISD.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exampleB5.dir/build.make CMakeFiles/exampleB5.dir/src/B5CsISD.cc.o
+.PHONY : src/B5CsISD.cc.o
+
+src/B5CsISD.i: src/B5CsISD.cc.i
+
+.PHONY : src/B5CsISD.i
+
+# target to preprocess a source file
+src/B5CsISD.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exampleB5.dir/build.make CMakeFiles/exampleB5.dir/src/B5CsISD.cc.i
+.PHONY : src/B5CsISD.cc.i
+
+src/B5CsISD.s: src/B5CsISD.cc.s
+
+.PHONY : src/B5CsISD.s
+
+# target to generate assembly for a file
+src/B5CsISD.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exampleB5.dir/build.make CMakeFiles/exampleB5.dir/src/B5CsISD.cc.s
+.PHONY : src/B5CsISD.cc.s
+
 src/B5DetectorConstruction.o: src/B5DetectorConstruction.cc.o
 
 .PHONY : src/B5DetectorConstruction.o
@@ -518,6 +572,12 @@ help:
 	@echo "... src/B5ActionInitialization.o"
 	@echo "... src/B5ActionInitialization.i"
 	@echo "... src/B5ActionInitialization.s"
+	@echo "... src/B5CsIHit.o"
+	@echo "... src/B5CsIHit.i"
+	@echo "... src/B5CsIHit.s"
+	@echo "... src/B5CsISD.o"
+	@echo "... src/B5CsISD.i"
+	@echo "... src/B5CsISD.s"
 	@echo "... src/B5DetectorConstruction.o"
 	@echo "... src/B5DetectorConstruction.i"
 	@echo "... src/B5DetectorConstruction.s"

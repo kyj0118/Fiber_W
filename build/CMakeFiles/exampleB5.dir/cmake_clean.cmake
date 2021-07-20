@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/exampleB5.dir/exampleB5.cc.o"
   "CMakeFiles/exampleB5.dir/src/B5ActionInitialization.cc.o"
+  "CMakeFiles/exampleB5.dir/src/B5CsIHit.cc.o"
+  "CMakeFiles/exampleB5.dir/src/B5CsISD.cc.o"
   "CMakeFiles/exampleB5.dir/src/B5DetectorConstruction.cc.o"
   "CMakeFiles/exampleB5.dir/src/B5EmCalorimeterHit.cc.o"
   "CMakeFiles/exampleB5.dir/src/B5EmCalorimeterSD.cc.o"

@@ -31,6 +31,7 @@
 #include "B5RunAction.hh"
 #include "B5EmCalorimeterHit.hh"
 #include "B5LeadHit.hh"
+#include "B5CsIHit.hh"
 
 #include "G4Event.hh"
 #include "G4RunManager.hh"
@@ -234,6 +235,11 @@ void B5EventAction::EndOfEventAction(const G4Event* event)
       iarrayLeadHit++;
     }
 
+    // CsI Hit
+    else if (iHCName == "CsIHitCollection"){
+      auto hit = (B5CsIHit*) (hce -> GetHC(i) -> GetHit(0));
+      CsIHit.e[0] = hit -> GetEdep();
+    }
   }
   
   EMHit.nhit = iarrayEMHit;
@@ -297,6 +303,8 @@ void B5EventAction::SetBranch(){
   fTree -> Branch("LeadHit.z",LeadHit.z,"LeadHit.z[nLeadHit]/D");
   fTree -> Branch("LeadHit.t",LeadHit.t,"LeadHit.t[nLeadHit]/D");
   fTree -> Branch("LeadHit.e",LeadHit.e,"LeadHit.e[nLeadHit]/D");
+
+  fTree -> Branch("CsIHit.e",CsIHit.e,"CsIHit.e[1]/D");
   
   if (fSaveStepLevel){
     fTree -> Branch("EMStepEdep",&fEMStepEdep);

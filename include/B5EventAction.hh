@@ -75,6 +75,10 @@ struct LeadHitStruct{
   double e[kMaxLayer];
 };
 
+struct CsIHitStruct{
+  double e[kMaxLayer];
+};
+
 struct EventInfoStruct{
   int eventID;
   int runID;
@@ -103,6 +107,7 @@ public:
   
   EMHitStruct EMHit;
   LeadHitStruct LeadHit;
+  CsIHitStruct CsIHit;
   EventInfoStruct EventInfo;
   PrimaryParticleInfoStruct PrimaryParticle;
 private:

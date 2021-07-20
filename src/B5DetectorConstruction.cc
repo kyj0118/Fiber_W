@@ -30,6 +30,7 @@
 #include "B5DetectorConstruction.hh"
 #include "B5EmCalorimeterSD.hh"
 #include "B5LeadSD.hh"
+#include "B5CsISD.hh"
 
 #include "G4TransportationManager.hh"
 
@@ -122,8 +123,12 @@ G4VPhysicalVolume* B5DetectorConstruction::Construct(){
 
   // Detector
 
+  // Materials
+  G4Material* Material_W = nist -> FindOrBuildMaterial("G4_W");
+  G4Material* Material_Scint = nist -> FindOrBuildMaterial("G4_PLASTIC_SC_VINYLTOLUENE");
+  G4Material* Material_CsI = nist -> FindOrBuildMaterial("G4_CESIUM_IODIDE");
+  
   // Tungsten plate
-  G4Material* detector_mat_W = nist -> FindOrBuildMaterial("G4_W");
   G4double W_size_x = 27.*cm;
   //G4double W_size_x = 1.*cm;
   G4double W_size_y = W_size_x;
@@ -134,9 +139,16 @@ G4VPhysicalVolume* B5DetectorConstruction::Construct(){
   G4double scint_size_y = 1.*mm;
   G4double scint_size_z = 1.*mm;
 
+  // CsI Box
+  G4double csi_size_x = W_size_x;
+  G4double csi_size_y = csi_size_x;
+  G4double csi_size_z = 30.0 *cm; // ~16X0 length
+  
   G4double layer_gap_z = W_size_z + scint_size_z;
   
-  G4Material* EJ200 = nist -> FindOrBuildMaterial("G4_PLASTIC_SC_VINYLTOLUENE");
+  G4double csi_offset_z = ((G4double) NumberOfLayers)*layer_gap_z + 0.5 * csi_size_z;
+  
+  
   
   std::vector<G4double> vRot;
   vRot.clear();
@@ -163,6 +175,12 @@ G4VPhysicalVolume* B5DetectorConstruction::Construct(){
 				     0.5*scint_size_x,
 				     0.5*scint_size_z);
 
+  G4Box* solidCsI = new G4Box("CsI",
+			    0.5*csi_size_x,
+			    0.5*csi_size_y,
+			    0.5*csi_size_z);
+
+  
   auto visAttributes_Scint = new G4VisAttributes(G4Colour(0.0,1.0,1.0));
   
   
@@ -178,8 +196,8 @@ G4VPhysicalVolume* B5DetectorConstruction::Construct(){
     TString str_scintname_tmp = Form("Scint%d",iLayer);
     G4String str_scintname = str_scintname_tmp.Data();
     
-    G4LogicalVolume* logicScintPlate =  new G4LogicalVolume(solidScintPlate, EJ200, str_scintname);
-    G4LogicalVolume* logicScint =  new G4LogicalVolume(solidScint, EJ200, str_scintname); 
+    G4LogicalVolume* logicScintPlate =  new G4LogicalVolume(solidScintPlate, Material_Scint, str_scintname);
+    G4LogicalVolume* logicScint =  new G4LogicalVolume(solidScint, Material_Scint, str_scintname); 
     
     if (iLayer % 2 == 0){
       auto pPhysScint = new G4PVPlacement(0,
@@ -205,7 +223,7 @@ G4VPhysicalVolume* B5DetectorConstruction::Construct(){
     }
     
     
-    G4LogicalVolume* logicW = new G4LogicalVolume(solidW, detector_mat_W, str_leadname);
+    G4LogicalVolume* logicW = new G4LogicalVolume(solidW, Material_W, str_leadname);
     new G4PVPlacement(0,
 		      G4ThreeVector(0,0,W_offset_z),
 		      logicW,
@@ -215,11 +233,24 @@ G4VPhysicalVolume* B5DetectorConstruction::Construct(){
 		      0,
 		      false);
     
-
+    
     // visualization attributes 
     logicScintPlate->SetVisAttributes(visAttributes_Scint);
     fVisAttributes.push_back(visAttributes_Scint);  
   }
+  
+  G4String str_csiname = "CsI";
+  G4LogicalVolume* logicCsI = new G4LogicalVolume(solidCsI, Material_CsI, str_csiname);
+  new G4PVPlacement(0,
+		    G4ThreeVector(0,0,csi_offset_z),
+		    logicCsI,
+		    str_csiname,
+		    logicWorld,
+		    false,
+		    0,
+		    false);
+  
+  
   return physWorld;
 }
 
@@ -246,6 +277,10 @@ void B5DetectorConstruction::ConstructSDandField()
     G4SDManager::GetSDMpointer() -> AddNewDetector(LeadSD);
     SetSensitiveDetector(str_leadname, LeadSD, true);
   }
+  B5CsISD* CsISD = new B5CsISD("CsI");
+  G4SDManager::GetSDMpointer() -> AddNewDetector(CsISD);
+  SetSensitiveDetector("CsI", CsISD, true);
+  
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
