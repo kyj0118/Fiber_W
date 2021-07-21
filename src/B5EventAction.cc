@@ -125,6 +125,7 @@ void B5EventAction::EndOfEventAction(const G4Event* event)
   auto hce = event -> GetHCofThisEvent();
   int iarrayEMHit = 0;
   int iarrayLeadHit = 0;
+  int iarrayCsIHit = 0;
   for (int i = 0; i < hce -> GetCapacity(); i++){
     if (hce -> GetHC(i) -> GetSize() == 0) continue;
     G4String iHCName = hce -> GetHC(i) -> GetName();
@@ -160,7 +161,6 @@ void B5EventAction::EndOfEventAction(const G4Event* event)
 	
 
 	  fEMStepEdep.push_back(stepE);
-	  //fEMStepEdep[iarrayEMHit] = stepE;
 	  fEMPreStepx.push_back(prex);
 	  fEMPreStepy.push_back(prey);
 	  fEMPreStepz.push_back(prez);
@@ -236,14 +236,20 @@ void B5EventAction::EndOfEventAction(const G4Event* event)
     }
 
     // CsI Hit
+    
     else if (iHCName == "CsIHitCollection"){
+      
       auto hit = (B5CsIHit*) (hce -> GetHC(i) -> GetHit(0));
-      CsIHit.e[0] = hit -> GetEdep();
+      CsIHit.e[iarrayCsIHit] = hit -> GetEdep();
+      CsIHit.xid[iarrayCsIHit] = hit -> GetXID();
+      CsIHit.yid[iarrayCsIHit] = hit -> GetYID();
+      iarrayCsIHit++;
     }
   }
   
   EMHit.nhit = iarrayEMHit;
   LeadHit.nhit = iarrayLeadHit;
+  CsIHit.nhit = iarrayCsIHit;
   
   PrimaryParticle.x = gPrimaryParticlePosition.getX();
   PrimaryParticle.y = gPrimaryParticlePosition.getY();
@@ -304,7 +310,11 @@ void B5EventAction::SetBranch(){
   fTree -> Branch("LeadHit.t",LeadHit.t,"LeadHit.t[nLeadHit]/D");
   fTree -> Branch("LeadHit.e",LeadHit.e,"LeadHit.e[nLeadHit]/D");
 
-  fTree -> Branch("CsIHit.e",CsIHit.e,"CsIHit.e[1]/D");
+  fTree -> Branch("nCsIHit",&CsIHit.nhit,"nCsIHit/I");
+  fTree -> Branch("CsIHit.xid",CsIHit.xid,"CsIHit.xid[nCsIHit]/I");
+  fTree -> Branch("CsIHit.yid",CsIHit.yid,"CsIHit.yid[nCsIHit]/I");
+  fTree -> Branch("CsIHit.e",CsIHit.e,"CsIHit.e[nCsIHit]/D");
+  
   
   if (fSaveStepLevel){
     fTree -> Branch("EMStepEdep",&fEMStepEdep);

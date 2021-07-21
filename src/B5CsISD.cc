@@ -42,10 +42,12 @@
 extern bool gSaveStepLevel;
 extern int gNumberOfScintillators;
 
-B5CsISD::B5CsISD(G4String name)
+B5CsISD::B5CsISD(G4String name, G4int xid, G4int yid)
   : G4VSensitiveDetector(name), fNameSD(name), fHitsCollection(nullptr), fHCID(-1)
 {
   fEdep = 0;
+  fxid = xid;
+  fyid = yid;
   collectionName.insert("CsIHitCollection"); 
 }  
 
@@ -70,7 +72,6 @@ void B5CsISD::Initialize(G4HCofThisEvent* hce)
 G4bool B5CsISD::ProcessHits(G4Step* step, G4TouchableHistory*)
 {
   auto edep = step->GetTotalEnergyDeposit();
-  
   if (edep != 0){
     fEdep += edep;
   }
@@ -81,11 +82,12 @@ G4bool B5CsISD::ProcessHits(G4Step* step, G4TouchableHistory*)
 
 void B5CsISD::EndOfEvent(G4HCofThisEvent* hce){
   if (fEdep == 0) return;
-  
   fHitsCollection->insert(new B5CsIHit(fHCID));
   auto hit = (B5CsIHit*) ((hce -> GetHC(fHCID)) -> GetHit(0));
   
   hit -> SetEdep(fEdep);
+  hit -> SetXID(fxid);
+  hit -> SetYID(fyid);
   
   fEdep = 0;
 }

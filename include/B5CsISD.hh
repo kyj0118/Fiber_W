@@ -42,7 +42,7 @@ using namespace std;
 class B5CsISD : public G4VSensitiveDetector
 {   
 public:
-  B5CsISD(G4String name);
+  B5CsISD(G4String name, G4int xid, G4int yid);
   virtual ~B5CsISD();
   
   virtual void Initialize(G4HCofThisEvent*HCE);
@@ -52,6 +52,9 @@ private:
   G4String fNameSD;
   G4int fLayerId;
   G4int fSegmentId;
+
+  G4int fxid;
+  G4int fyid;
 
   G4double fEdep;
   

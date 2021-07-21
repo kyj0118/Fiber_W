@@ -62,6 +62,13 @@ public:
   void SetCellID(G4int z) { fCellID = z; }
   G4int GetCellID() const { return fCellID; }
 
+  void SetXID(G4int id) { fxid = id; }
+  G4int GetXID() const { return fxid; }
+
+  void SetYID(G4int id) { fyid = id; }
+  G4int GetYID() const { return fyid; }
+
+
   void SetLayerID(G4int z) { fLayerID = z; }
   G4int GetLayerID() const { return fLayerID; }
 
@@ -160,7 +167,8 @@ private:
   G4int fCellID;
   G4int fLayerID;
   G4int fSegmentID;
-  
+  G4int fxid;
+  G4int fyid;
   G4double fEdep;
   G4double fTime;
   G4ThreeVector fPos;

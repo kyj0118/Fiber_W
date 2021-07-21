@@ -76,7 +76,10 @@ struct LeadHitStruct{
 };
 
 struct CsIHitStruct{
-  double e[kMaxLayer];
+  int nhit;
+  int xid[999];
+  int yid[999];
+  double e[999];
 };
 
 struct EventInfoStruct{
