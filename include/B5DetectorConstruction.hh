@@ -60,7 +60,9 @@ class B5DetectorConstruction : public G4VUserDetectorConstruction
   private:
   std::vector<G4VisAttributes*> fVisAttributes;
   G4int NumberOfLayers;
+  G4int NumberOfLayersGrouping;
   G4int NumberOfScintillators;
+
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

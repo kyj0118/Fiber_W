@@ -71,8 +71,7 @@ B5DetectorConstruction::B5DetectorConstruction()
 {
   NumberOfLayers = 110;
   NumberOfScintillators = 285; // Number of scintillator segments in a layer
-  //NumberOfScintillators = 10; // Number of scintillator segments in a layer
-  
+  NumberOfLayersGrouping = 5;
   gNumberOfScintillators = NumberOfScintillators;
 }
 
@@ -202,8 +201,9 @@ G4VPhysicalVolume* B5DetectorConstruction::Construct(){
     
     G4LogicalVolume* logicScintPlate =  new G4LogicalVolume(solidScintPlate, Material_Scint, str_scintname);
     G4LogicalVolume* logicScint =  new G4LogicalVolume(solidScint, Material_Scint, str_scintname); 
-    
-    if (iLayer % 2 == 0){
+
+    G4int iLayerGroup = iLayer/NumberOfLayersGrouping;
+    if (iLayerGroup % 2 == 0){
       auto pPhysScint = new G4PVPlacement(0,
 					  G4ThreeVector(0,0,scint_offset_z),
 					  logicScintPlate,
